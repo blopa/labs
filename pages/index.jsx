@@ -10,6 +10,7 @@ import getClients from "../utility/getClients";
 
 // Components
 import ClientsList from "../components/ClientsList";
+import {Typography} from "@mui/material";
 
 const getInitialProps = async () => {
     const clients = await getClients();
