@@ -1,8 +1,8 @@
 import {memo, useCallback, useMemo, useState} from 'react';
 import Image from 'next/image';
 import { Box, Avatar, ListItemAvatar, ListItemText, ListItemButton } from "@mui/material";
-import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
+import DebounceInput from "./DebounceInput";
 
 // Components
 // const ClientDetails = dynamic(() => import('./ClientDetails'))
@@ -17,7 +17,7 @@ function Client({ client }) {
 
     const onCloseModal = useCallback(() => {
         setOpenDetails(false);
-    }, [areDetailsOpen]);
+    }, []);
 
     return (
         <Box>

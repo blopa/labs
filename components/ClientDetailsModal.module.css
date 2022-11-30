@@ -1,0 +1,8 @@
+.client-details-wrapper {
+    display: flex;
+}
+
+.details-wrapper {
+    margin-left: 38px;
+    width: 100%;
+}
