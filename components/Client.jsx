@@ -8,10 +8,20 @@ import {
     ListItemButton,
 } from '@mui/material';
 import dynamic from 'next/dynamic';
+import PropTypes from 'prop-types';
 
 // Components
-// const ClientDetails = dynamic(() => import('./ClientDetails'))
 const ClientDetailsModal = dynamic(() => import('./ClientDetailsModal'));
+
+const propTypes = {
+    client: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        avatar: PropTypes.string.isRequired,
+        quote: PropTypes.string,
+        nationality: PropTypes.string,
+    }).isRequired,
+};
 
 function Client({ client }) {
     const [areDetailsOpen, setOpenDetails] = useState(false);
@@ -50,5 +60,7 @@ function Client({ client }) {
         </Box>
     );
 }
+
+Client.propTypes = propTypes;
 
 export default memo(Client);

@@ -2,6 +2,7 @@ import { useCallback, useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { Typography, Button } from '@mui/material';
+import PropTypes from 'prop-types';
 
 // Styles
 import styles from '../styles/Home.module.css';
@@ -12,6 +13,19 @@ import { getClients, getClientsTotal } from '../utility/api';
 // Components
 import ClientsList from '../components/ClientsList';
 import DebounceInput from '../components/DebounceInput';
+
+const propTypes = {
+    clientsTotal: PropTypes.number.isRequired,
+    clients: PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
+            avatar: PropTypes.string.isRequired,
+            quote: PropTypes.string,
+            nationality: PropTypes.string,
+        }).isRequired
+    ).isRequired,
+};
 
 const getInitialProps = async () => {
     const clients = await getClients(2);
@@ -93,5 +107,6 @@ function Home({ clients: ssrClients, clientsTotal }) {
 }
 
 Home.getInitialProps = getInitialProps;
+Home.propTypes = propTypes;
 
 export default Home;

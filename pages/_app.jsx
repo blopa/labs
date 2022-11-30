@@ -1,5 +1,6 @@
 import { CacheProvider } from '@emotion/react';
 import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
+import PropTypes from 'prop-types';
 
 // Fonts
 import '@fontsource/roboto/300.css';
@@ -19,6 +20,12 @@ import '../styles/globals.css';
 const clientSideEmotionCache = createEmotionCache();
 const lightTheme = createTheme(lightThemeOptions);
 
+const propTypes = {
+    Component: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    pageProps: PropTypes.object,
+    emotionCache: PropTypes.object,
+};
+
 function MySimpleApp({
     Component,
     emotionCache = clientSideEmotionCache,
@@ -33,5 +40,7 @@ function MySimpleApp({
         </CacheProvider>
     );
 }
+
+MySimpleApp.propTypes = propTypes;
 
 export default MySimpleApp;

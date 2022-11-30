@@ -2,9 +2,22 @@ import { memo } from 'react';
 import { Divider, Box, Typography } from '@mui/material';
 import BasicModal from './BasicModal';
 import Image from 'next/image';
+import PropTypes from 'prop-types';
 
 // Styles
 import styles from '../styles/ClientDetailsModal.module.css';
+
+const propTypes = {
+    client: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        avatar: PropTypes.string.isRequired,
+        quote: PropTypes.string,
+        nationality: PropTypes.string,
+    }).isRequired,
+    handleClose: PropTypes.func.isRequired,
+    show: PropTypes.bool.isRequired,
+};
 
 function ClientDetailsModal({ client, show, handleClose }) {
     return (
@@ -71,5 +84,7 @@ function ClientDetailsModal({ client, show, handleClose }) {
         </BasicModal>
     );
 }
+
+ClientDetailsModal.propTypes = propTypes;
 
 export default memo(ClientDetailsModal);

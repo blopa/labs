@@ -1,7 +1,14 @@
 import { Box, Modal } from '@mui/material';
+import PropTypes from 'prop-types';
 
 // Styles
 import styles from '../styles/BasicModal.module.css';
+
+const propTypes = {
+    handleClose: PropTypes.func.isRequired,
+    show: PropTypes.bool.isRequired,
+    children: PropTypes.node.isRequired,
+};
 
 function BasicModal({ handleClose, show, children }) {
     return (
@@ -15,5 +22,7 @@ function BasicModal({ handleClose, show, children }) {
         </Modal>
     );
 }
+
+BasicModal.propTypes = propTypes;
 
 export default BasicModal;
