@@ -5,6 +5,6 @@ const nextConfig = {
         dangerouslyAllowSVG: true,
         domains: ['avataaars.io'],
     },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

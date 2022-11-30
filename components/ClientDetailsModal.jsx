@@ -1,16 +1,18 @@
 import { memo } from 'react';
-import { Divider, Box, CardContent, Card, Typography} from "@mui/material";
-import BasicModal from "./BasicModal";
-import Image from "next/image";
+import { Divider, Box, Typography } from '@mui/material';
+import BasicModal from './BasicModal';
+import Image from 'next/image';
 
 // Styles
-import styles from './ClientDetailsModal.module.css';
+import styles from '../styles/ClientDetailsModal.module.css';
 
 function ClientDetailsModal({ client, show, handleClose }) {
     return (
-        <BasicModal show={show} handleClose={handleClose} >
+        <BasicModal show={show} handleClose={handleClose}>
             <div>
-                <Typography variant="subtitle1" align="center">Client Details</Typography>
+                <Typography variant="subtitle1" align="center">
+                    Client Details
+                </Typography>
                 <div className={styles['client-details-wrapper']}>
                     <Image
                         src={client.avatar}
@@ -20,31 +22,47 @@ function ClientDetailsModal({ client, show, handleClose }) {
                     />
                     <div className={styles['details-wrapper']}>
                         <Box>
-                            <Divider textAlign="left" >
-                                <Typography variant="subtitle2">Name</Typography>
+                            <Divider textAlign="left">
+                                <Typography variant="subtitle2">
+                                    Name
+                                </Typography>
                             </Divider>
-                            <Typography variant="body1">{client.name}</Typography>
+                            <Typography variant="body1">
+                                {client.name}
+                            </Typography>
                         </Box>
                         <Box>
-                            <Divider textAlign="left" >
-                                <Typography variant="subtitle2">Title</Typography>
+                            <Divider textAlign="left">
+                                <Typography variant="subtitle2">
+                                    Title
+                                </Typography>
                             </Divider>
-                            <Typography variant="body1">{client.title}</Typography>
+                            <Typography variant="body1">
+                                {client.title}
+                            </Typography>
                         </Box>
                         {client.nationality && (
                             <Box>
-                                <Divider textAlign="left" >
-                                    <Typography variant="subtitle2">Nationality</Typography>
+                                <Divider textAlign="left">
+                                    <Typography variant="subtitle2">
+                                        Nationality
+                                    </Typography>
                                 </Divider>
-                                <Typography variant="body1">{client.nationality}</Typography>
+                                <Typography variant="body1">
+                                    {client.nationality}
+                                </Typography>
                             </Box>
                         )}
                         {client.quote && (
                             <Box>
-                                <Divider textAlign="left" >
-                                    <Typography variant="subtitle2">Quote</Typography>
+                                <Divider textAlign="left">
+                                    <Typography variant="subtitle2">
+                                        Quote
+                                    </Typography>
                                 </Divider>
-                                <Typography variant="body1" component="aside">{client.quote}</Typography>
+                                <Typography variant="body1" component="aside">
+                                    {client.quote}
+                                </Typography>
                             </Box>
                         )}
                     </div>

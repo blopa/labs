@@ -1,12 +1,17 @@
-import {memo, useCallback, useMemo, useState} from 'react';
+import { memo, useCallback, useState } from 'react';
 import Image from 'next/image';
-import { Box, Avatar, ListItemAvatar, ListItemText, ListItemButton } from "@mui/material";
+import {
+    Box,
+    Avatar,
+    ListItemAvatar,
+    ListItemText,
+    ListItemButton,
+} from '@mui/material';
 import dynamic from 'next/dynamic';
-import DebounceInput from "./DebounceInput";
 
 // Components
 // const ClientDetails = dynamic(() => import('./ClientDetails'))
-const ClientDetailsModal = dynamic(() => import('./ClientDetailsModal'))
+const ClientDetailsModal = dynamic(() => import('./ClientDetailsModal'));
 
 function Client({ client }) {
     const [areDetailsOpen, setOpenDetails] = useState(false);
@@ -36,7 +41,11 @@ function Client({ client }) {
             </ListItemButton>
             {areDetailsOpen && (
                 // <ClientDetails client={client} />
-                <ClientDetailsModal client={client} show={areDetailsOpen} handleClose={onCloseModal} />
+                <ClientDetailsModal
+                    client={client}
+                    show={areDetailsOpen}
+                    handleClose={onCloseModal}
+                />
             )}
         </Box>
     );

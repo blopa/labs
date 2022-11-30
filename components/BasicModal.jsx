@@ -1,7 +1,7 @@
 import { Box, Modal } from '@mui/material';
 
 // Styles
-import styles from './BasicModal.module.css';
+import styles from '../styles/BasicModal.module.css';
 
 function BasicModal({ handleClose, show, children }) {
     return (
@@ -11,9 +11,7 @@ function BasicModal({ handleClose, show, children }) {
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
         >
-            <Box className={styles['modal-box']}>
-                {children}
-            </Box>
+            <Box className={styles['modal-box']}>{children}</Box>
         </Modal>
     );
 }

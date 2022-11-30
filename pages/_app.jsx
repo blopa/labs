@@ -1,5 +1,5 @@
-import {CacheProvider} from '@emotion/react';
-import {ThemeProvider, CssBaseline, createTheme} from '@mui/material';
+import { CacheProvider } from '@emotion/react';
+import { ThemeProvider, CssBaseline, createTheme } from '@mui/material';
 
 // Fonts
 import '@fontsource/roboto/300.css';
@@ -14,21 +14,24 @@ import createEmotionCache from '../utility/createEmotionCache';
 import lightThemeOptions from '../styles/themes/light';
 
 // Styles
-import '../styles/globals.css'
+import '../styles/globals.css';
 
 const clientSideEmotionCache = createEmotionCache();
 const lightTheme = createTheme(lightThemeOptions);
 
-function MySimpleApp({Component, emotionCache = clientSideEmotionCache, pageProps}) {
-
+function MySimpleApp({
+    Component,
+    emotionCache = clientSideEmotionCache,
+    pageProps,
+}) {
     return (
         <CacheProvider value={emotionCache}>
             <ThemeProvider theme={lightTheme}>
-                <CssBaseline/>
+                <CssBaseline />
                 <Component {...pageProps} />
             </ThemeProvider>
         </CacheProvider>
     );
 }
 
-export default MySimpleApp
+export default MySimpleApp;
