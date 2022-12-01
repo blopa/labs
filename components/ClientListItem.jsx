@@ -23,7 +23,7 @@ const propTypes = {
     }).isRequired,
 };
 
-function Client({ client }) {
+function ClientListItem({ client }) {
     const [areDetailsOpen, setOpenDetails] = useState(false);
 
     const onClientClicked = useCallback(() => {
@@ -61,6 +61,6 @@ function Client({ client }) {
     );
 }
 
-Client.propTypes = propTypes;
+ClientListItem.propTypes = propTypes;
 
-export default memo(Client);
+export default memo(ClientListItem);

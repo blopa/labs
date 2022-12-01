@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, memo } from 'react';
 import { debounce } from 'lodash';
 import { TextField } from '@mui/material';
 import PropTypes from 'prop-types';
@@ -22,4 +22,4 @@ function DebounceInput({ onSearch }) {
 
 DebounceInput.propTypes = propTypes;
 
-export default DebounceInput;
+export default memo(DebounceInput);

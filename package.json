@@ -7,11 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "bump": "ncu -u -t minor"
+    "bump": "ncu -u -t minor",
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.19.1",
     "@babel/eslint-plugin": "^7.19.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
@@ -23,6 +26,7 @@
     "eslint-plugin-sonarjs": "^0.16.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
     "npm-check-updates": "^16.4.3",
     "prop-types": "^15.8.1"
   },

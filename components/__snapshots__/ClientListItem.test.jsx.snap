@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-0"
+  >
+    <div
+      class="MuiButtonBase-root MuiListItemButton-root MuiListItemButton-gutters MuiListItemButton-root MuiListItemButton-gutters css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="MuiListItemAvatar-root css-1e9lk82-MuiListItemAvatar-root"
+      >
+        <div
+          class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-2s90m6-MuiAvatar-root"
+        >
+          <img
+            alt="Picture of Ash Ketchum"
+            data-nimg="1"
+            decoding="async"
+            height="50"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Favataaars.io%2F%3FavatarStyle%3DCircle%26topType%3DShortHairDreads01%26accessoriesType%3DBlank%26hairColor%3DBrownDark%26facialHairType%3DBlank%26clotheType%3DBlazerShirt%26eyeType%3DDefault%26eyebrowType%3DDefault%26mouthType%3DSmile%26skinColor%3DLight&w=128&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Favataaars.io%2F%3FavatarStyle%3DCircle%26topType%3DShortHairDreads01%26accessoriesType%3DBlank%26hairColor%3DBrownDark%26facialHairType%3DBlank%26clotheType%3DBlazerShirt%26eyeType%3DDefault%26eyebrowType%3DDefault%26mouthType%3DSmile%26skinColor%3DLight&w=64&q=75 1x, /_next/image?url=https%3A%2F%2Favataaars.io%2F%3FavatarStyle%3DCircle%26topType%3DShortHairDreads01%26accessoriesType%3DBlank%26hairColor%3DBrownDark%26facialHairType%3DBlank%26clotheType%3DBlazerShirt%26eyeType%3DDefault%26eyebrowType%3DDefault%26mouthType%3DSmile%26skinColor%3DLight&w=128&q=75 2x"
+            style="color: transparent;"
+            width="50"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiListItemText-root MuiListItemText-multiline css-konndc-MuiListItemText-root"
+      >
+        <span
+          class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-10hburv-MuiTypography-root"
+        >
+          Ash Ketchum
+        </span>
+        <p
+          class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-83ijpv-MuiTypography-root"
+        >
+          Pokémon World Champion
+        </p>
+      </div>
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </div>
+  </div>
+</div>
+`;

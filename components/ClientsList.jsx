@@ -3,7 +3,7 @@ import { List } from '@mui/material';
 import PropTypes from 'prop-types';
 
 // Components
-import Client from './Client';
+import ClientListItem from './ClientListItem';
 
 const propTypes = {
     clients: PropTypes.arrayOf(
@@ -23,7 +23,7 @@ function ClientsList({ clients }) {
             sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
         >
             {clients.map((client, index) => {
-                return <Client key={index} client={client} />;
+                return <ClientListItem key={index} client={client} />;
             })}
         </List>
     );
